@@ -2,6 +2,17 @@
 name = "policy-bridge"
 version = "0.1.0"
 edition = "2024"
+authors = ["Sachin Kumar <sachinkumar.ar97@gmail.com"]
+description = "Package to run inference for the Trained RL Policy"
+documentation = "https://docs.rs/policy-bridge"
+readme = "README.md"
+homepage = "https://github.com/sachinkum0009/policy-bridge"
+repository = "https://github.com/sachinkum0009/policy-bridge"
+license = "Apache-2.0"
+license-file = "LICENSE"
+keywords = ["policy bridge", "reinformement learning", "rl policy"]
+exclude = ["justfile", "RELEASE.md", "system_design.md", "system_requirements.md"]
+publish = "policy-bridge"
 
 [dependencies]
 ort = { version = "2.0.0-rc.12", features = ["cuda"] }

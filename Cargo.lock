@@ -71,14 +71,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "773648b94d0e5d620f64f280777445740e61fe701025087ec8b57f45c791888b"
 
 [[package]]
-name = "denso-sim2real"
-version = "0.1.0"
-dependencies = [
- "ort",
- "tokio",
-]
-
-[[package]]
 name = "der"
 version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -399,6 +391,14 @@ name = "pkg-config"
 version = "0.3.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "19f132c84eca552bf34cab8ec81f1c1dcc229b811638f9d283dceabe58c5569e"
+
+[[package]]
+name = "policy-bridge"
+version = "0.1.0"
+dependencies = [
+ "ort",
+ "tokio",
+]
 
 [[package]]
 name = "portable-atomic"

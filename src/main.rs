@@ -1,8 +1,12 @@
-use denso_sim2real::Sim2Real;
+use policy_bridge::bridge::PolicyBridge;
 
 #[tokio::main]
-async fn main() {
-    let sim2real = Sim2Real::new();
-    sim2real.do_something();
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let mut policy_bridge = PolicyBridge::new();
+    policy_bridge.load("my_model.onnx")?;
+    policy_bridge.info()?;
+
+    policy_bridge.do_something();
     println!("Hello, world!");
+    Ok(())
 }

@@ -24,3 +24,7 @@ clean:
 # Dry run publish
 dry-publish:
     cargo publish --dry-run
+
+# Publish crate
+publish:
+    cargo publish

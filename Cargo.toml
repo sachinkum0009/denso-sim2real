@@ -1,10 +1,10 @@
 [package]
 name = "policy-bridge"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 authors = ["Sachin Kumar <sachinkumar.ar97@gmail.com"]
 description = "Package to run inference for the Trained RL Policy"
-documentation = "https://docs.rs/policy-bridge"
+# documentation = "https://docs.rs/policy-bridge"
 readme = "README.md"
 homepage = "https://github.com/sachinkum0009/policy-bridge"
 repository = "https://github.com/sachinkum0009/policy-bridge"

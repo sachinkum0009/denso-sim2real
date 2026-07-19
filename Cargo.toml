@@ -1,6 +1,6 @@
 [package]
 name = "policy-bridge"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 authors = ["Sachin Kumar <sachinkumar.ar97@gmail.com"]
 description = "Package to run inference for the Trained RL Policy"

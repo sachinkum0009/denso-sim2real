@@ -12,7 +12,7 @@ license = "Apache-2.0"
 license-file = "LICENSE"
 keywords = ["policy bridge", "reinformement learning", "rl policy"]
 exclude = ["justfile", "RELEASE.md", "system_design.md", "system_requirements.md"]
-publish = ["policy-bridge"]
+# publish = ["policy-bridge"]
 
 [dependencies]
 ort = { version = "2.0.0-rc.12", features = ["cuda"] }

@@ -1,28 +1,16 @@
 //! Bridge infrastructure for loading and interacting with ONNX Runtime policies.
 
-use ort::device::Device;
+use ort::Result;
 use ort::session::Session;
-use ort::{Result, session};
 
 /// A bridge manager that handles the lifecycle and execution of an ONNX Runtime inference session.
+#[derive(Default)]
 pub struct PolicyBridge {
     /// The active ONNX Runtime session, or `None` if a model has not been loaded yet.
     session: Option<Session>,
 }
 
 impl PolicyBridge {
-    /// Creates a new, uninitialized `PolicyBridge` instance with no model loaded.
-    ///
-    /// # Examples
-    ///
-    /// ```
-    /// use policy_bridge::bridge::PolicyBridge;
-    /// let bridge = PolicyBridge::new();
-    /// ```
-    pub fn new() -> Self {
-        Self { session: None }
-    }
-
     /// Executes a placeholder action.
     pub fn do_something(&self) {
         println!("hello");
@@ -74,7 +62,7 @@ mod tests {
 
     #[test]
     fn test_new_bridge_is_empty() {
-        let bridge = PolicyBridge::new();
+        let bridge = PolicyBridge::default();
         assert!(
             bridge.session.is_none(),
             "A new bridge should not have session loaded"
@@ -83,7 +71,7 @@ mod tests {
 
     #[test]
     fn test_load_non_existent_model_fails() {
-        let mut bridge = PolicyBridge::new();
+        let mut bridge = PolicyBridge::default();
 
         // This should fail because the file doesn't exist return an Err
         let result = bridge.load("non_existent_model.onnx");
